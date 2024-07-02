@@ -14,7 +14,6 @@
     "debug": "node --inspect-brk server"
   },
   "dependencies": {
-    "@libsql/client": "^0.6.2",
     "axios": "^1.7.2",
     "dotenv": "^16.4.5",
     "react": "^18.3.1",

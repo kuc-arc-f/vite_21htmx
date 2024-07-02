@@ -6,7 +6,7 @@
 
  date    : 2024/03/23 
 
- update  : 2024/06/30  
+ update  : 2024/06/30 
 
 ***
 ### Summary
@@ -16,6 +16,7 @@ htmx , vite SSR sample
 ***
 ### stackblitz
 
+https://stackblitz.com/~/github.com/kuc-arc-f/vite_21htmx
 
 ***
 ### build

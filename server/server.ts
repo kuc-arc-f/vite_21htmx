@@ -7,15 +7,12 @@ import 'dotenv/config'
 //
 import testRouter from './api/test';
 import commonRouter from './api/commonRouter';
-import tursoTodoRouter from './api/tursoTodoRouter';
+//import tursoTodoRouter from './api/tursoTodoRouter';
 //
 //import Htmx1 from './pages/Htmx1';
 import Htmx2 from './pages/Htmx2';
 import Htmx3 from './pages/Htmx3';
-import HtmxTodo from './pages/HtmxTodo';
-import HtmxTodoShow from './pages/HtmxTodoShow';
 //
-import HtmxTodoIndex from "./pages/HtmxTodo/CrudIndex";
 //
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -30,28 +27,12 @@ app.use(express.urlencoded({ extended: true }));
 //API
 app.use('/api/test', testRouter);
 app.use('/api/common', commonRouter);
-app.use('/api/turso_todo', tursoTodoRouter);
 //routes
 app.get('/htmx2', (req: any, res: any) => {
   try {res.send(renderToString(Htmx2()));} catch (error) { res.sendStatus(500);}
 });
 app.get('/htmx3', (req: any, res: any) => {
   try {res.send(renderToString(Htmx3()));} catch (error) { res.sendStatus(500);}
-});
-app.get('/htmxtodo', async (req: any, res: any) => {
-  try {
-    const items = await HtmxTodoIndex.getList();
-    res.send(renderToString(HtmxTodo(items)));
-  } catch (error) {
-     res.sendStatus(500);
-  }
-});
-app.get('/htmxtodoshow/:id', async (req: any, res: any) => {
-  //console.log("id=", req.params.id  );
-  try {
-    const item = await HtmxTodoIndex.get(Number(req.params.id));
-    res.send(renderToString(HtmxTodoShow(item)));
-  } catch (error) { res.sendStatus(500);}
 });
 
 //
