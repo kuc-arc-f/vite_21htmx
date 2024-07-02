@@ -33,7 +33,7 @@ console.log("#TestApi");
         <label>Content:</label>
         <input type="text" name="content" /><br />
         {/*  */}
-        <input type="text" name="api_url" value="/test/create" /><br />
+        <input type="text" name="api_url" defaultValue="/test/create" /><br />
         <button type="submit">Add</button>
       </form>
       <hr />
