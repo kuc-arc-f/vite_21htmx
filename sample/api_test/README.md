@@ -14,6 +14,20 @@
 htmx , vite + api sample
 
 ***
+### API : workers + D1
+
+https://github.com/kuc-arc-f/hono_34api
+
+***
+### Setup
+
+* .env
+* EXTERNAL_API_URL, set
+
+```
+EXTERNAL_API_URL="http://localhost"
+```
+***
 ### build
 
 * build, dev-start
